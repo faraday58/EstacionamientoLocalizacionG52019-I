@@ -35,16 +35,21 @@
             this.columnaHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaHoraSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tiempoEstacionamiento = new System.Windows.Forms.Timer(this.components);
+            this.lbTiempo = new System.Windows.Forms.Label();
+            this.errorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCajones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv1)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbCajones
             // 
+            this.ptbCajones.Image = global::ControlEstacionamiento.Properties.Resources.coche3;
             this.ptbCajones.Location = new System.Drawing.Point(37, 32);
             this.ptbCajones.Name = "ptbCajones";
-            this.ptbCajones.Size = new System.Drawing.Size(333, 325);
+            this.ptbCajones.Size = new System.Drawing.Size(333, 255);
+            this.ptbCajones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbCajones.TabIndex = 0;
             this.ptbCajones.TabStop = false;
             // 
@@ -86,18 +91,39 @@
             this.columnaDetalles.HeaderText = "Detalles";
             this.columnaDetalles.Name = "columnaDetalles";
             // 
+            // tiempoEstacionamiento
+            // 
+            this.tiempoEstacionamiento.Interval = 1000;
+            this.tiempoEstacionamiento.Tick += new System.EventHandler(this.tiempoEstacionamiento_Tick);
+            // 
+            // lbTiempo
+            // 
+            this.lbTiempo.AutoSize = true;
+            this.lbTiempo.Location = new System.Drawing.Point(570, 57);
+            this.lbTiempo.Name = "lbTiempo";
+            this.lbTiempo.Size = new System.Drawing.Size(35, 13);
+            this.lbTiempo.TabIndex = 2;
+            this.lbTiempo.Text = "label1";
+            // 
+            // errorProv1
+            // 
+            this.errorProv1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 450);
+            this.ClientSize = new System.Drawing.Size(913, 296);
+            this.Controls.Add(this.lbTiempo);
             this.Controls.Add(this.dgvVehiculos);
             this.Controls.Add(this.ptbCajones);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ptbCajones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,7 +135,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaHoraEntrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaHoraSalida;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaDetalles;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tiempoEstacionamiento;
+        private System.Windows.Forms.Label lbTiempo;
+        private System.Windows.Forms.ErrorProvider errorProv1;
     }
 }
 

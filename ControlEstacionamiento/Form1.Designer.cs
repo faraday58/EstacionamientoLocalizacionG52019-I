@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ptbCajones = new System.Windows.Forms.PictureBox();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.columnaPlacas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaHoraSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCajones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +109,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaHoraEntrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaHoraSalida;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaDetalles;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamientos", "Estacio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlEstacionamiento", "ControlEstacionamiento\ControlEstacionamiento.csproj", "{CF8DC0A6-590F-46A2-B684-82527763C75E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehiculos", "Vehiculos\Vehiculos.csproj", "{CA52D7B7-06D9-4026-AFCC-D09913BBC119}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CF8DC0A6-590F-46A2-B684-82527763C75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF8DC0A6-590F-46A2-B684-82527763C75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF8DC0A6-590F-46A2-B684-82527763C75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA52D7B7-06D9-4026-AFCC-D09913BBC119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA52D7B7-06D9-4026-AFCC-D09913BBC119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA52D7B7-06D9-4026-AFCC-D09913BBC119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA52D7B7-06D9-4026-AFCC-D09913BBC119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

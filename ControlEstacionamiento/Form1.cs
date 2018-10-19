@@ -36,22 +36,29 @@ namespace ControlEstacionamiento
                 errorProv1.Clear();
                 tiempoEstacionamiento.Start();
                 Random random = new Random();
-                imagen = (byte)random.Next(1, 3);
+                imagen = (byte)random.Next(1, 4);
 
-
-                switch( imagen )
+               
+                switch ( imagen )
                 {
                     case 1:
-                        ptbCajones.Image = global::ControlEstacionamiento.Properties.Resources.coche1;
+                        ptbVehiculo.Image = global::ControlEstacionamiento.Properties.Resources.coche1;
                         break;
                     case 2:
-                        ptbCajones.Image = global::ControlEstacionamiento.Properties.Resources.coche2;
+                        ptbVehiculo.Image = global::ControlEstacionamiento.Properties.Resources.coche2;
                         break;
                     case 3:
-                        ptbCajones.Image = global::ControlEstacionamiento.Properties.Resources.coche2;
+                        ptbVehiculo.Image = global::ControlEstacionamiento.Properties.Resources.coche3;
                         break;
                 }
+
+                do
+                {
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X + 1, ptbVehiculo.Location.Y);
+                    Refresh();
+                } while (ptbVehiculo.Location.X < 82);
                 
+
             }
             catch(ApplicationException error)
             {
@@ -85,17 +92,48 @@ namespace ControlEstacionamiento
                             dgvVehiculos.Rows[aux++].Selected = true;
                         }
                     }
+
                 }
                 else
                 {
                     tiempoEstacionamiento.Stop();
+                    ptbVehiculo.Focus();
                 }
-
+                
+                
+                
 
                                
 
             }
 
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(ptbVehiculo.Location.X >= 82)
+            {
+                if(e.KeyChar == (char)Keys.Down)
+                {
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X, ptbVehiculo.Location.Y-1);
+                    Refresh();
+                }
+                if(e.KeyChar == (char)Keys.Up)
+                {
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X, ptbVehiculo.Location.Y + 1);
+                    Refresh();
+                }
+                if(e.KeyChar == (char)Keys.Right)
+                {
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X +1 , ptbVehiculo.Location.Y);
+                    Refresh();
+                }
+                if(e.KeyChar == (char)Keys.Left)
+                {
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X - 1, ptbVehiculo.Location.Y);
+                    Refresh();
+                }
+            }
         }
     }
 }

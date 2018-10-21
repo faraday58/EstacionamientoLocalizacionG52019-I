@@ -56,7 +56,6 @@
             // 
             // dgvVehiculos
             // 
-            this.dgvVehiculos.CausesValidation = false;
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnaPlacas,
@@ -66,7 +65,8 @@
             this.dgvVehiculos.Location = new System.Drawing.Point(427, 123);
             this.dgvVehiculos.Name = "dgvVehiculos";
             this.dgvVehiculos.Size = new System.Drawing.Size(443, 150);
-            this.dgvVehiculos.TabIndex = 1;
+            this.dgvVehiculos.StandardTab = true;
+            this.dgvVehiculos.TabIndex = 10;
             this.dgvVehiculos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVehiculos_RowHeaderMouseDoubleClick);
             // 
             // columnaPlacas
@@ -118,7 +118,9 @@
             this.panelCroquis.Location = new System.Drawing.Point(79, 27);
             this.panelCroquis.Name = "panelCroquis";
             this.panelCroquis.Size = new System.Drawing.Size(298, 231);
-            this.panelCroquis.TabIndex = 3;
+            this.panelCroquis.TabIndex = 1;
+            this.panelCroquis.TabStop = true;
+            this.panelCroquis.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panelCroquis_PreviewKeyDown);
             // 
             // Form1
             // 
@@ -131,7 +133,6 @@
             this.Controls.Add(this.dgvVehiculos);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.ptbVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv1)).EndInit();

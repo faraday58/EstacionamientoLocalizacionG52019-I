@@ -97,7 +97,7 @@ namespace ControlEstacionamiento
                 else
                 {
                     tiempoEstacionamiento.Stop();
-                    ptbVehiculo.Focus();
+                    panelCroquis.Focus();
                 }
                 
                 
@@ -109,31 +109,41 @@ namespace ControlEstacionamiento
 
         }
 
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        
+
+        private void panelCroquis_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if(ptbVehiculo.Location.X >= 82)
+            dgvVehiculos.Enabled = false;
+           
+           
+            if (ptbVehiculo.Location.X >= 82)
             {
-                if(e.KeyChar == (char)Keys.Down)
+                if (e.KeyCode == Keys.Down)
                 {
-                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X, ptbVehiculo.Location.Y-1);
-                    Refresh();
-                }
-                if(e.KeyChar == (char)Keys.Up)
-                {
+                    panelCroquis.Focus();
                     ptbVehiculo.Location = new Point(ptbVehiculo.Location.X, ptbVehiculo.Location.Y + 1);
-                    Refresh();
+                    
                 }
-                if(e.KeyChar == (char)Keys.Right)
+                if (e.KeyCode == Keys.Up)
                 {
-                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X +1 , ptbVehiculo.Location.Y);
-                    Refresh();
+                    panelCroquis.Focus();
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X, ptbVehiculo.Location.Y - 1);
+                    
                 }
-                if(e.KeyChar == (char)Keys.Left)
+                if (e.KeyCode == Keys.Right)
                 {
+                    panelCroquis.Focus();
+                    ptbVehiculo.Location = new Point(ptbVehiculo.Location.X + 1, ptbVehiculo.Location.Y);
+                    
+                }
+                if (e.KeyCode == Keys.Left)
+                {
+                    panelCroquis.Focus();
                     ptbVehiculo.Location = new Point(ptbVehiculo.Location.X - 1, ptbVehiculo.Location.Y);
-                    Refresh();
+                    
                 }
             }
+
         }
     }
 }

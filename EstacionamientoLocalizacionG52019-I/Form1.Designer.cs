@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gmcPosicionEstacionamiento = new GMap.NET.WindowsForms.GMapControl();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNombre = new System.Windows.Forms.TextBox();
@@ -40,6 +41,10 @@
             this.lstbNombre = new System.Windows.Forms.ListBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.contMenuLista = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ControlDeLista = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contMenuLista.SuspendLayout();
             this.SuspendLayout();
             // 
             // gmcPosicionEstacionamiento
@@ -134,6 +139,7 @@
             // 
             // lstbNombre
             // 
+            this.lstbNombre.ContextMenuStrip = this.contMenuLista;
             this.lstbNombre.FormattingEnabled = true;
             this.lstbNombre.Location = new System.Drawing.Point(557, 217);
             this.lstbNombre.Name = "lstbNombre";
@@ -160,6 +166,26 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // contMenuLista
+            // 
+            this.contMenuLista.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ControlDeLista,
+            this.buscarToolStripMenuItem});
+            this.contMenuLista.Name = "contMenuLista";
+            this.contMenuLista.Size = new System.Drawing.Size(118, 48);
+            // 
+            // ControlDeLista
+            // 
+            this.ControlDeLista.Name = "ControlDeLista";
+            this.ControlDeLista.Size = new System.Drawing.Size(117, 22);
+            this.ControlDeLista.Text = "Ordenar";
+            // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.buscarToolStripMenuItem.Text = "Buscar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +206,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.contMenuLista.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +226,9 @@
         private System.Windows.Forms.ListBox lstbNombre;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ContextMenuStrip contMenuLista;
+        private System.Windows.Forms.ToolStripMenuItem ControlDeLista;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
     }
 }
 

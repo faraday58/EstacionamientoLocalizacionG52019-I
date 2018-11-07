@@ -7,12 +7,12 @@ using Vehiculos;
 
 namespace ControlEstacionamiento
 {
-    public partial class Form1 : Form
+    public partial class ControlEntradaSalida : Form
     {
         Queue<Vehiculo> filaVehiculos;
         Vehiculo vehiculo;
         byte imagen;
-        public Form1()
+        public ControlEntradaSalida()
         {
             InitializeComponent();
 

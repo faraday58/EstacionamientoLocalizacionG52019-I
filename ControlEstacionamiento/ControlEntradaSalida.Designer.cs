@@ -1,6 +1,6 @@
 ﻿namespace ControlEstacionamiento
 {
-    partial class Form1
+    partial class ControlEntradaSalida
     {
         /// <summary>
         /// Variable del diseñador necesaria.

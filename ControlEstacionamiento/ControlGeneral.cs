@@ -52,5 +52,19 @@ namespace ControlEstacionamiento
                 MessageBox.Show("Error: " + error.Message);
             }
         }
+
+        private void encenderLuzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ControlLuz controlLuz = new ControlLuz(puertoserial, this);
+                controlLuz.Show();
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error " + error.Message);
+            }
+            
+        }
     }
 }

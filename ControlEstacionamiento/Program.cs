@@ -16,7 +16,7 @@ namespace ControlEstacionamiento
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ControlEntradaSalida());
+            Application.Run(new ControlGeneral());
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnPrendeApaga.TabIndex = 1;
             this.btnPrendeApaga.Text = "On/Off";
             this.btnPrendeApaga.UseVisualStyleBackColor = true;
+            this.btnPrendeApaga.Click += new System.EventHandler(this.btnPrendeApaga_Click);
             // 
             // ptbFoco
             // 

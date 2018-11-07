@@ -42,6 +42,8 @@
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscmbVelocidad = new System.Windows.Forms.ToolStripComboBox();
             this.tscmbPuertos = new System.Windows.Forms.ToolStripComboBox();
+            this.aplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encenderLuzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.conexiónToolStripMenuItem});
+            this.conexiónToolStripMenuItem,
+            this.aplicacionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(751, 24);
@@ -154,6 +157,21 @@
             this.tscmbPuertos.Name = "tscmbPuertos";
             this.tscmbPuertos.Size = new System.Drawing.Size(121, 23);
             // 
+            // aplicacionesToolStripMenuItem
+            // 
+            this.aplicacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.encenderLuzToolStripMenuItem});
+            this.aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
+            this.aplicacionesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.aplicacionesToolStripMenuItem.Text = "Aplicaciones";
+            // 
+            // encenderLuzToolStripMenuItem
+            // 
+            this.encenderLuzToolStripMenuItem.Name = "encenderLuzToolStripMenuItem";
+            this.encenderLuzToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.encenderLuzToolStripMenuItem.Text = "Encender Luz";
+            this.encenderLuzToolStripMenuItem.Click += new System.EventHandler(this.encenderLuzToolStripMenuItem_Click);
+            // 
             // ControlGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +205,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem conectarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aplicacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem encenderLuzToolStripMenuItem;
     }
 }

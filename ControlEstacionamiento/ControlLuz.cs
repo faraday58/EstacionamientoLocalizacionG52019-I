@@ -1,20 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO.Ports;
 namespace ControlEstacionamiento
 {
     public partial class ControlLuz : Form
     {
-        public ControlLuz()
+        SerialPort puertoserial;
+        bool boton = false;
+        public ControlLuz(SerialPort puertoserial, ControlGeneral control)
         {
             InitializeComponent();
+            this.puertoserial = puertoserial;
+            this.MdiParent = control;
+        }
+
+        private void btnPrendeApaga_Click(object sender, EventArgs e)
+        {
+            if( !boton)
+            {
+                puertoserial.Write("e");
+                ptbFoco.BackColor = Color.Yellow;
+                boton = true;
+            }
+            else
+            {
+                puertoserial.Write("a");
+                ptbFoco.BackColor = Color.Black;
+                boton = false;
+            }
+
         }
     }
 }

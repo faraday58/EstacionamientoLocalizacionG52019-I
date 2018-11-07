@@ -29,7 +29,28 @@ namespace ControlEstacionamiento
 
         private void verificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                puertoserial.BaudRate =int.Parse( tscmbVelocidad.SelectedItem.ToString());
+                puertoserial.PortName = tscmbPuertos.SelectedItem.ToString();
 
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
+        private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                puertoserial.Open();
+            }
+            catch(IOException error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
         }
     }
 }

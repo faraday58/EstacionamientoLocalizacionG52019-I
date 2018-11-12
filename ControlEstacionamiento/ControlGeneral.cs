@@ -66,5 +66,11 @@ namespace ControlEstacionamiento
             }
             
         }
+
+        private void monitorTemperaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonitorTemperatura monitor = new MonitorTemperatura(puertoserial, this);
+            monitor.Show();
+        }
     }
 }

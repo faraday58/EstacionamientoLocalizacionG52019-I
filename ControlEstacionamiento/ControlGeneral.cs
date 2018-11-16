@@ -72,5 +72,7 @@ namespace ControlEstacionamiento
             MonitorTemperatura monitor = new MonitorTemperatura(puertoserial, this);
             monitor.Show();
         }
+
+       
     }
 }
